@@ -3,7 +3,9 @@
 [ -e './log' ] && rm -f log
 
 apt-get update -y && apt-get upgrade -y
-apt-get purge wireshark-qt wireshark ophcrack
+apt-get purge wireshark-qt wireshark ophcrack aisleriot \
+       	gnome-sudoku mahjongg ace-of-penguins gnomine \
+       	gbrainy gnome-mines
 apt-get install ufw -y && ufw enable
 
 sed -i 's/\(pam_pwquality.so\).*$/\1 minlen=14/' /etc/pam.d/common-password
